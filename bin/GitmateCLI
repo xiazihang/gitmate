@@ -2,7 +2,6 @@
 require 'readline'
 require 'thor'
 require 'colorize'
-require_relative '../lib/string_ext'
 require_relative '../lib/gitmate/git'
 require_relative '../lib/gitmate/git_ext.rb'
 require_relative '../gitmate'

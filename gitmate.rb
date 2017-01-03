@@ -7,13 +7,13 @@ module Gitmate
 
     desc 'M card_id'.green, 'Merge current branch with specified one'.green
     def m card_id = nil
-      p "merge"
+      #TODO
       # Gitmate::GitExt.merge card_id
     end
 
     desc 'D card_id'.green, 'Delete the specified branch'.green
     def d card_id = nil
-      p "delete"
+      #TODO
       # Gitmate::GitExt.merge card_id
     end
 
