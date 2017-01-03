@@ -22,6 +22,10 @@ module Gitmate
       super
     end
 
+    def method_missing(name, *args)
+      c(name)
+    end
+
     default_task :c
   end
 end
