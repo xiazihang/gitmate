@@ -1,9 +1,5 @@
 class String
-  def green
-    colorize(color: :green)
-  end
-
-  def red
-    colorize(color: :red)
+  def method_missing(name, *args)
+    colorize(color: name.to_sym)
   end
 end

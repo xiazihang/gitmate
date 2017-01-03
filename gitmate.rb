@@ -17,6 +17,11 @@ module Gitmate
       # Gitmate::GitExt.merge card_id
     end
 
+    desc 'help'.yellow, ''
+    def help
+      super
+    end
+
     default_task :c
   end
 end
