@@ -3,7 +3,7 @@ module Gitmate
     class << self
       def checkout card_id
         branch = parse card_id
-        Git.chackout branch
+        Git.checkout branch
       end
 
       private
