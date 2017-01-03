@@ -17,6 +17,10 @@ module Gitmate
       # Gitmate::GitExt.merge card_id
     end
 
+    def method_missing(name, *args)
+      c(name)
+    end
+
     default_task :c
   end
 end
