@@ -22,6 +22,11 @@ module Gitmate
       super
     end
 
+    desc 'version'.green, 'show current version'.green
+    def version
+      puts "1.0.0 by Zihang".green
+    end
+
     def method_missing(name, *args)
       c(name)
     end

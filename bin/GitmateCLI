@@ -2,9 +2,9 @@
 require 'readline'
 require 'thor'
 require 'colorize'
-require './lib/string_ext'
-require './lib/gitmate/git'
-require './lib/gitmate/git_ext.rb'
-require './gitmate'
+require_relative '../lib/string_ext'
+require_relative '../lib/gitmate/git'
+require_relative '../lib/gitmate/git_ext.rb'
+require_relative '../gitmate'
 
 Gitmate::CLI.start(ARGV)
