@@ -1,0 +1,15 @@
+GEM
+  remote: https://gems.ruby-china.org/
+  specs:
+    colorized (0.0.0)
+    thor (0.19.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorized
+  thor
+
+BUNDLED WITH
+   1.12.5

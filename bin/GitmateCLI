@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'readline'
+require 'thor'
+require 'colorize'
+require './lib/string_ext'
+require './lib/gitmate/git'
+require './lib/gitmate/git_ext.rb'
+require './gitmate'
+
+Gitmate::CLI.start(ARGV)
