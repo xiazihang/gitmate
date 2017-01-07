@@ -1,20 +1,29 @@
 module Gitmate
   class CLI < Thor
-    desc 'C card_id'.green, 'Switch to the specified branch'.green
+    desc 'c card_id'.green, 'Switch to the specified branch'.green
     def c card_id = nil
       GitExt.checkout card_id
     end
 
-    desc 'M card_id'.green, 'Merge current branch with specified one'.green
+    desc 'm card_id'.green, 'Merge current branch with specified one'.green
     def m card_id = nil
       #TODO
       # Gitmate::GitExt.merge card_id
+      p "merge branch"
     end
 
-    desc 'D card_id'.green, 'Delete the specified branch'.green
+    desc 'd card_id'.green, 'Delete the specified branch'.green
     def d card_id = nil
       #TODO
       # Gitmate::GitExt.merge card_id
+      p "delete local"
+    end
+
+    desc 'rd card_id'.green, 'Delete the specified remote branch'.green
+    def d card_id = nil
+      #TODO
+      # Gitmate::GitExt.remote_delete card_id
+      p "remote delete"
     end
 
     desc 'help'.yellow, ''
