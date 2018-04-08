@@ -6,6 +6,16 @@ module Gitmate
         Git.checkout branch
       end
 
+      def delete_remote_merged_branches
+        branches = find_remote_merged_branches
+        exit(1) if branches.empty? and puts "No merged remote branches found!"
+        branches.each do |branch|
+          puts "Delete branch #{branch}"
+          Git.delete_remote branch
+        end
+        puts "Done!"
+      end
+
       private
 
       def parse card_id, default_branch = 'develop'
@@ -47,6 +57,11 @@ module Gitmate
         else
           [card_id]
         end
+      end
+
+      def find_remote_merged_branches
+        branches = `git branch -r --merged origin/master | sed s:origin/::`
+        branches.split("\n").reject {|branch| branch =~ /(master|develop|HEAD|release)/}.flatten.uniq
       end
     end
   end

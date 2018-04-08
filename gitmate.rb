@@ -20,10 +20,15 @@ module Gitmate
     end
 
     desc 'rd card_id'.green, 'Delete the specified remote branch'.green
-    def d card_id = nil
+    def remote_delete card_id = nil
       #TODO
       # Gitmate::GitExt.remote_delete card_id
       p "remote delete"
+    end
+
+    desc 'delete_remote '.green, 'Delete the merged remote branches'.green
+    def delete_remote
+      GitExt.delete_remote_merged_branches
     end
 
     desc 'help'.yellow, ''
